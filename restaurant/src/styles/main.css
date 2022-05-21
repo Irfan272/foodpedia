@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,400;0,600;1,500&family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,400;0,600;1,500&family=Roboto+Condensed:ital,wght@0,700;1,400;1,700&family=Shizuru&family=Ubuntu:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #26282B;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+    AppBar
+  */
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: #5F85DB;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: relative;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+
+}
+
+.app-bar .app-bar__brand a {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: bold;
+  user-select: none;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 55px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #5F85DB;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+/*
+    Main Content
+  */
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.restaurant-card {
+  width: 100%;
+  margin: 20px 0;
+  box-shadow: 1px 4px 8px 2px #00000033;
+  border-radius: 8px;
+  overflow: hidden;
+  color: white;
+}
+
+.restaurant-card a {
+  color: white;
+  text-decoration: none;
+}
+
+.text-secondary {
+  position: center;
+}
+
+.restaurant-card .img-container {
+  position: relative;
+}
+
+.restaurant-card .content-container {
+  padding: 8px;
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.customer-review {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.card-title {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: large;
+  padding: 1em;
+  background-color: #000000a8;
+  z-index: 1;
+  margin: auto;
+}
+
+.card-rating {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: large;
+  background-color: #90B8F8;
+  padding: 4px 8px;
+  border-bottom-left-radius: 8px;
+  z-index: 1;
+  border-top-right-radius: 5px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.hero {
+  height: 500px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.list-menu li {
+  margin: 5px 0;
+  list-style: none;
+  padding: 5px;
+  border-radius: 6px;
+
+}
+
+.food li {
+  background-color: #264C63;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.drink li {
+  background-color: rgb(22, 21, 21);
+  color: white;
+  text-align: center;
+}
+
+.review {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.review-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  margin: 5px 0;
+}
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+    Footer
+  */
+
+footer {
+  padding: 16px;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer p a {
+  color: #db0000;
+  text-decoration: none;
+}
